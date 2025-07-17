@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --a: 0;
+    --b: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: black;
+    column-rule: white;
+    overflow: auto;
+    /* keep scrolling enabled */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+}
+
+.container {
+    max-height: 100vh;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: transparent;
+    /* optional, just for clean look */
+}
+
+.left {
+    width: 25vw;
+    padding: 16px;
+    flex-direction: column;
+}
+
+.right {
+    width: 75vw;
+    margin: 16px 0;
+    position: relative;
+}
+
+.home {
+    padding: 10px;
+}
+
+.home ul li {
+    display: flex;
+    width: 14px;
+    list-style: none;
+    padding-top: 14px;
+    font-weight: bold;
+}
+
+.heading {
+    display: flex;
+    gap: 15px;
+    padding-top: 14px;
+    font-weight: bold;
+    width: 100%;
+    align-items: center;
+}
+
+.library {
+    min-height: 73vh;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.home i {
+    width: 15px;
+    height: 15px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #343434;
+}
+
+.header>* {
+    padding: 20px;
+}
+
+.btn {
+    background-color: transparent;
+    color: white;
+    border-radius: 2px;
+    height: 30px;
+    width: 30px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn i {
+    align-self: center;
+    justify-self: center;
+    font-size: 20px;
+}
+
+.btn:hover {
+    background-color: #343434;
+    cursor: pointer;
+}
+
+.playlist {
+    padding: 16px;
+}
+
+.card-contaner {
+    margin: 30px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    max-height: 80vh;
+}
+
+.card {
+    width: 190px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: black;
+    position: relative;
+    /* transition: all 0.5s ease-in-out; */
+}
+
+.card:hover {
+    --a: 1;
+    background-color: #121212;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.card>* {
+    padding-top: 10px;
+}
+
+.play {
+    display: flex;
+    height: 35px;
+    width: 35px;
+    border-radius: 15px;
+    background-color: #1fdf64;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 169px;
+    right: 17px;
+    opacity: var(--a);
+    transition: all 0.2s ease-out;
+}
+
+/* Webkit Browsers (Chrome, Edge, Safari) */
+body::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Hide scrollbar buttons (↑ and ↓) */
+body::-webkit-scrollbar-button {
+    display: none;
+    height: 0;
+    width: 0;
+}
+
+/* Firefox */
+body {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.signup {
+    background-color: transparent;
+    color: rgb(156, 148, 148);
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    transition: all 0.1s ease-in-out;
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+.signup:hover {
+    font-size: 17px;
+    color: white;
+}
+
+.login {
+    background-color: white;
+    border-radius: 24px;
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 80px;
+    font-size: 16px;
+    transition: all 0.1s ease-in-out;
+}
+
+.login:hover {
+    font-size: 17px;
+    width: 81px;
+}
+
+.nav {
+    justify-content: center;
+}
+
+.playbar {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    height: 40px;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #252525;
+}
+
+.songbuttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.song-list {
+    padding-top: 10px;
+    max-height: 380px;
+    overflow: auto;
+}
+
+.song-list .info {
+    width: 344px;
+}
+
+.song-list ul {
+    padding: 0 15px;
+}
+
+.song-list ul li {
+    list-style: none;
+    display: flex;
+    gap: 34px;
+    cursor: pointer;
+    padding: 12px 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 12px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.s-img i {
+    font-size: 30px;
+    padding-left: 5px;
+}
+
+.s-img:hover {
+    --b: 1;
+}
+
+.credit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+.ho {
+    opacity: var(--b);
+    transition: all 0.2s ease-in-out;
+}
+
+.ho:hover {
+    --b: 1;
+}
+
+/* .seekbar {
+    height: 2px;
+    width: 97%;
+    background-color: white;
+    border: 2px solid white;
+    position: absolute;
+    bottom: 0;
+    position: absolute;
+    bottom: 15px;
+    border-radius: 3px;
+} */
+
+.circle {
+    width: 18px;
+    height: 18px;
+    border-radius: 13px;
+    position: relative;
+    bottom: 9px;
+    background-color: white;
+    left: 0;
+    transition: left 0.5s;
+}
+
+.songbuttons i {
+    cursor: pointer;
+}
+
+.seekbar-container {
+    position: absolute;
+    bottom: 12px;
+    width: 100%;
+    padding: 0 10px;
+    left: 0px;
+    box-sizing: border-box;
+}
+
+.seek-bar-info {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 12px;
+    margin-bottom: 2px;
+    /* padding: 0 4px; */
+}
+
+#seek-bar {
+    width: 100%;
+    appearance: none;
+    height: 4px;
+    background: white;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}
