@@ -123,11 +123,11 @@ body::-webkit-scrollbar {
     gap: 15px;
     flex-wrap: wrap;
     overflow-y: scroll;
-    max-height: 80vh;
+    max-height: 60vh;
 }
 
 .card {
-    width: 190px;
+    width: 180px;
     padding: 10px;
     border-radius: 5px;
     background-color: black;
