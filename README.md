@@ -43,7 +43,7 @@ project-root/
 ├── index.html # Main HTML file
 ├── style.css # All styling and layout
 ├── script.js # JavaScript logic for player and dynamic rendering
-├── utility.css # (Optional) utility classes, if used
+├── utility.css # utility classes
 └── songs/ # Root folder containing music albums
 ├── album1/
 │ ├── track1.mp3
